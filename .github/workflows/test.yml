@@ -1,0 +1,20 @@
+name: Homebrew formula
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: macos-15-intel
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up local tap
+        run: |
+          mkdir -p "$(brew --repository)/Library/Taps/game0ver247"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/game0ver247/homebrew-resonance"
+      - name: Install and test
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: '1'
+        run: |
+          brew install Game0ver247/resonance/resonance
+          brew test Game0ver247/resonance/resonance
+          resonance --help
