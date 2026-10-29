@@ -1,9 +1,9 @@
 class Resonance < Formula
   desc "Album-focused Spotify listening interface powered by Spicetify"
   homepage "https://github.com/Game0ver247/resonance"
-  url "https://github.com/Game0ver247/resonance/archive/8951051f582e9d4252995c47f06a1d833cf03194.tar.gz"
-  version "4.10.1"
-  sha256 "36e12d9b9aad4b0726d66faa48f09b01d3394ce26ed32bd574e632419a5376dd"
+  url "https://github.com/Game0ver247/resonance/archive/542e1387237d9535b17cb4070896da01a28aa79c.tar.gz"
+  version "4.11.0"
+  sha256 "c5121970c9df5e7e9fe080191f2b17b2159147a028d493eff8365702396d1a52"
 
   depends_on "python@3.14"
   depends_on "spicetify-cli"
